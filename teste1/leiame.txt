@@ -1,0 +1,7 @@
+Foi implementado um trecho de código para converter o arquivo .xlsx  para .json. Para tal, basta executar o comando abaixo:
+
+	node xlsxtojson.js
+
+Posteriormente, a tabela foi "populada" com os dados lidos do arquivo (.json) gerado. Foi utilizado a biblioteca de funções javascript, jQuery.
+
+Obs.: Os testes foram feitos no Ubuntu 18.04 e navegador Mozilla Firefox 61.0.1
