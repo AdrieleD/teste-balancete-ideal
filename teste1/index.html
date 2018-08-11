@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <title>Teste 01 - Nucont</title>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <script src = "jhttps//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.css"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="table-responsive">
+        <h1>Teste 01 - Nucont</h1>
+        <br/>
+
+        <table class="table table-bordered table-striped" id="tabela">
+          <tr>
+              <th>Classificador</th>
+              <th>Descricao</th>
+              <th>Saldo Inicial</th>
+              <th>Debito</th>
+              <th>Credito</th>
+              <th>Saldo Atual</th>
+            </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+  <script>
+  $(document).ready(function(){
+    $.getJSON("balanceteideal.json", function(data){
+      var tabela_dados = '';
+      $.each(data, function(key, value){
+        tabela_dados += '<tr>';
+        tabela_dados += '<td>'+value.Classificador+'</td>';
+        tabela_dados += '<td>'+value.Descricao+'</td>';
+        tabela_dados += '<td>'+value.SaldoInicial+'</td>';
+        tabela_dados += '<td>'+value.Debito+'</td>';
+        tabela_dados += '<td>'+value.Credito+'</td>';
+        tabela_dados += '<td>'+value.SaldoAtual+'</td>';
+        tabela_dados += '<tr>';
+      });
+      $('#tabela').append(tabela_dados);
+    });
+  });
+</script>
+</html>
