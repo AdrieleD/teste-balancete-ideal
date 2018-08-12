@@ -3,7 +3,7 @@ Para executar:
 	
 O objetivo seria primeiramente ler o arquivo .txt e realizar uma busca por strings que fogem do padrão.
 Segue abaixo algumas dessas strings:
-	-  9.9.99.999.999
+	-  9.9.99.999.999 (tratado)
 	- datas e horas
 
 Após isso, os dados seriam ordenados conforme o outro arquivo fornecido, e seria possível popular a tabela.
